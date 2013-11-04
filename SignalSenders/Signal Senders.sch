@@ -8408,8 +8408,6 @@ SMT- SWCH-08247</description>
 <pinref part="IC2" gate="G$1" pin="VCC@1"/>
 <pinref part="P+2" gate="1" pin="+5V"/>
 <wire x1="127" y1="35.56" x2="121.92" y2="35.56" width="0.1524" layer="91"/>
-<pinref part="C3" gate="G$1" pin="1"/>
-<wire x1="121.92" y1="30.48" x2="121.92" y2="35.56" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="IC2" gate="G$1" pin="AVCC"/>
@@ -8605,44 +8603,49 @@ SMT- SWCH-08247</description>
 <net name="LEDBLUE" class="0">
 <segment>
 <pinref part="IC2" gate="G$1" pin="PC5(ADC5/SCL)"/>
+<wire x1="175.26" y1="58.42" x2="177.8" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="190.5" y1="58.42" x2="177.8" y2="58.42" width="0.1524" layer="91"/>
 <label x="177.8" y="58.42" size="1.778" layer="95"/>
-<wire x1="175.26" y1="58.42" x2="208.28" y2="58.42" width="0.1524" layer="91"/>
+</segment>
+<segment>
 <pinref part="LED4" gate="G$1" pin="A"/>
 <wire x1="226.06" y1="60.96" x2="208.28" y2="60.96" width="0.1524" layer="91"/>
 <label x="208.28" y="60.96" size="1.778" layer="95"/>
-<wire x1="208.28" y1="58.42" x2="208.28" y2="60.96" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="LEDYELLOW" class="0">
 <segment>
 <pinref part="IC2" gate="G$1" pin="PC4(ADC4/SDA)"/>
+<wire x1="175.26" y1="60.96" x2="190.5" y2="60.96" width="0.1524" layer="91"/>
 <label x="177.8" y="60.96" size="1.778" layer="95"/>
-<wire x1="175.26" y1="60.96" x2="205.74" y2="60.96" width="0.1524" layer="91"/>
-<wire x1="205.74" y1="60.96" x2="205.74" y2="76.2" width="0.1524" layer="91"/>
+</segment>
+<segment>
 <pinref part="LED3" gate="G$1" pin="A"/>
-<wire x1="226.06" y1="76.2" x2="205.74" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="226.06" y1="76.2" x2="208.28" y2="76.2" width="0.1524" layer="91"/>
 <label x="208.28" y="76.2" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="LEDGREEN" class="0">
 <segment>
 <pinref part="IC2" gate="G$1" pin="PC3(ADC3)"/>
-<wire x1="175.26" y1="63.5" x2="203.2" y2="63.5" width="0.1524" layer="91"/>
+<wire x1="175.26" y1="63.5" x2="190.5" y2="63.5" width="0.1524" layer="91"/>
 <label x="177.8" y="63.5" size="1.778" layer="95"/>
-<wire x1="203.2" y1="63.5" x2="203.2" y2="88.9" width="0.1524" layer="91"/>
+</segment>
+<segment>
 <pinref part="LED2" gate="G$1" pin="A"/>
-<wire x1="226.06" y1="88.9" x2="203.2" y2="88.9" width="0.1524" layer="91"/>
+<wire x1="226.06" y1="88.9" x2="208.28" y2="88.9" width="0.1524" layer="91"/>
 <label x="208.28" y="88.9" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="LEDRED" class="0">
 <segment>
 <pinref part="IC2" gate="G$1" pin="PC2(ADC2)"/>
-<wire x1="175.26" y1="66.04" x2="200.66" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="175.26" y1="66.04" x2="190.5" y2="66.04" width="0.1524" layer="91"/>
 <label x="177.8" y="66.04" size="1.778" layer="95"/>
-<wire x1="200.66" y1="66.04" x2="200.66" y2="104.14" width="0.1524" layer="91"/>
+</segment>
+<segment>
 <pinref part="LED1" gate="G$1" pin="A"/>
-<wire x1="226.06" y1="104.14" x2="200.66" y2="104.14" width="0.1524" layer="91"/>
+<wire x1="226.06" y1="104.14" x2="208.28" y2="104.14" width="0.1524" layer="91"/>
 <label x="208.28" y="104.14" size="1.778" layer="95"/>
 </segment>
 </net>
