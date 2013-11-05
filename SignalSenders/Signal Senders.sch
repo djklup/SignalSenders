@@ -8342,6 +8342,56 @@ SMT- SWCH-08247</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="adafruit">
+<packages>
+<package name="1X01">
+<description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
+<wire x1="-0.635" y1="1.27" x2="0.635" y2="1.27" width="0.1524" layer="21"/>
+<wire x1="0.635" y1="1.27" x2="1.27" y2="0.635" width="0.1524" layer="21"/>
+<wire x1="1.27" y1="0.635" x2="1.27" y2="-0.635" width="0.1524" layer="21"/>
+<wire x1="1.27" y1="-0.635" x2="0.635" y2="-1.27" width="0.1524" layer="21"/>
+<wire x1="-1.27" y1="0.635" x2="-1.27" y2="-0.635" width="0.1524" layer="21"/>
+<wire x1="-0.635" y1="1.27" x2="-1.27" y2="0.635" width="0.1524" layer="21"/>
+<wire x1="-1.27" y1="-0.635" x2="-0.635" y2="-1.27" width="0.1524" layer="21"/>
+<wire x1="0.635" y1="-1.27" x2="-0.635" y2="-1.27" width="0.1524" layer="21"/>
+<pad name="1" x="0" y="0" drill="1.016" diameter="1.9304" shape="octagon"/>
+<text x="-1.3462" y="1.8288" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<text x="-1.27" y="-3.175" size="1.27" layer="27">&gt;VALUE</text>
+<rectangle x1="-0.254" y1="-0.254" x2="0.254" y2="0.254" layer="51"/>
+</package>
+</packages>
+<symbols>
+<symbol name="PINHD1">
+<wire x1="-6.35" y1="-2.54" x2="1.27" y2="-2.54" width="0.4064" layer="94"/>
+<wire x1="1.27" y1="-2.54" x2="1.27" y2="2.54" width="0.4064" layer="94"/>
+<wire x1="1.27" y1="2.54" x2="-6.35" y2="2.54" width="0.4064" layer="94"/>
+<wire x1="-6.35" y1="2.54" x2="-6.35" y2="-2.54" width="0.4064" layer="94"/>
+<text x="-6.35" y="3.175" size="1.778" layer="95">&gt;NAME</text>
+<text x="-6.35" y="-5.08" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="1" x="-2.54" y="0" visible="pad" length="short" direction="pas" function="dot"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="PINHD-1X1" prefix="JP" uservalue="yes">
+<description>&lt;b&gt;Pin header 1x1 for 0.1" spacing&lt;/b&gt;
+&lt;p&gt;
+With round pins</description>
+<gates>
+<gate name="G$1" symbol="PINHD1" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="1X01">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -8382,6 +8432,8 @@ SMT- SWCH-08247</description>
 <part name="GND9" library="supply1" deviceset="GND" device=""/>
 <part name="GND10" library="supply1" deviceset="GND" device=""/>
 <part name="C3" library="rcl" deviceset="C-US" device="C0805" value="22pF"/>
+<part name="JP3" library="adafruit" deviceset="PINHD-1X1" device=""/>
+<part name="JP4" library="adafruit" deviceset="PINHD-1X1" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -8402,6 +8454,7 @@ SMT- SWCH-08247</description>
 <text x="218.44" y="40.64" size="1.778" layer="97">RF Module</text>
 <rectangle x1="48.26" y1="10.16" x2="73.66" y2="38.1" layer="97"/>
 <text x="55.88" y="40.64" size="1.778" layer="97">IR Sensor</text>
+<text x="157.48" y="101.6" size="1.778" layer="91">Tx Rx Headers</text>
 </plain>
 <instances>
 <instance part="IC2" gate="G$1" x="149.86" y="43.18"/>
@@ -8430,10 +8483,12 @@ SMT- SWCH-08247</description>
 <instance part="P+3" gate="1" x="55.88" y="35.56"/>
 <instance part="FRAME1" gate="G$1" x="25.4" y="-40.64"/>
 <instance part="Y1" gate="G$1" x="88.9" y="53.34" rot="R90"/>
-<instance part="S1" gate="S" x="121.92" y="73.66"/>
+<instance part="S1" gate="S" x="119.38" y="73.66"/>
 <instance part="GND9" gate="1" x="111.76" y="68.58"/>
 <instance part="GND10" gate="1" x="121.92" y="20.32"/>
 <instance part="C3" gate="G$1" x="121.92" y="27.94"/>
+<instance part="JP3" gate="G$1" x="170.18" y="96.52"/>
+<instance part="JP4" gate="G$1" x="170.18" y="88.9"/>
 </instances>
 <busses>
 </busses>
@@ -8494,7 +8549,7 @@ SMT- SWCH-08247</description>
 </segment>
 <segment>
 <pinref part="S1" gate="S" pin="2"/>
-<wire x1="116.84" y1="71.12" x2="111.76" y2="71.12" width="0.1524" layer="91"/>
+<wire x1="114.3" y1="71.12" x2="111.76" y2="71.12" width="0.1524" layer="91"/>
 <pinref part="GND9" gate="1" pin="GND"/>
 </segment>
 <segment>
@@ -8690,6 +8745,7 @@ SMT- SWCH-08247</description>
 <segment>
 <pinref part="IC2" gate="G$1" pin="PC6(/RESET)"/>
 <pinref part="S1" gate="S" pin="4"/>
+<wire x1="124.46" y1="71.12" x2="127" y2="71.12" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="RFMOD7" class="0">
@@ -8704,6 +8760,22 @@ SMT- SWCH-08247</description>
 <pinref part="JP1" gate="A" pin="8"/>
 <wire x1="241.3" y1="12.7" x2="256.54" y2="12.7" width="0.1524" layer="91"/>
 <label x="246.38" y="12.7" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="N$2" class="0">
+<segment>
+<wire x1="170.18" y1="96.52" x2="198.12" y2="96.52" width="0.1524" layer="91"/>
+<wire x1="198.12" y1="96.52" x2="198.12" y2="45.72" width="0.1524" layer="91"/>
+<pinref part="IC2" gate="G$1" pin="PD1(TXD)"/>
+<wire x1="175.26" y1="45.72" x2="198.12" y2="45.72" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$3" class="0">
+<segment>
+<wire x1="170.18" y1="88.9" x2="195.58" y2="88.9" width="0.1524" layer="91"/>
+<wire x1="195.58" y1="88.9" x2="195.58" y2="48.26" width="0.1524" layer="91"/>
+<pinref part="IC2" gate="G$1" pin="PD0(RXD)"/>
+<wire x1="175.26" y1="48.26" x2="195.58" y2="48.26" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
