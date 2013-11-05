@@ -8408,8 +8408,6 @@ SMT- SWCH-08247</description>
 <pinref part="IC2" gate="G$1" pin="VCC@1"/>
 <pinref part="P+2" gate="1" pin="+5V"/>
 <wire x1="127" y1="35.56" x2="121.92" y2="35.56" width="0.1524" layer="91"/>
-<pinref part="C3" gate="G$1" pin="1"/>
-<wire x1="121.92" y1="30.48" x2="121.92" y2="35.56" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="IC2" gate="G$1" pin="AVCC"/>
