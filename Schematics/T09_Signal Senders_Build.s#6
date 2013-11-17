@@ -9534,8 +9534,9 @@ either a battery or AC adapter to power the unit.l </text>
 <wire x1="45.72" y1="220.98" x2="45.72" y2="231.14" width="0.1524" layer="91"/>
 <wire x1="45.72" y1="231.14" x2="40.64" y2="231.14" width="0.1524" layer="91"/>
 <junction x="45.72" y="231.14"/>
-<wire x1="53.34" y1="210.82" x2="53.34" y2="231.14" width="0.1524" layer="91"/>
 <wire x1="53.34" y1="231.14" x2="45.72" y2="231.14" width="0.1524" layer="91"/>
+<pinref part="JP3" gate="G$1" pin="2"/>
+<wire x1="53.34" y1="210.82" x2="53.34" y2="231.14" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="JP1" gate="A" pin="1"/>
@@ -9551,6 +9552,14 @@ either a battery or AC adapter to power the unit.l </text>
 <pinref part="C7" gate="G$1" pin="2"/>
 <pinref part="GND15" gate="1" pin="GND"/>
 <wire x1="101.6" y1="68.58" x2="101.6" y2="66.04" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<wire x1="299.72" y1="99.06" x2="299.72" y2="104.14" width="0.1524" layer="91"/>
+<wire x1="299.72" y1="104.14" x2="294.64" y2="104.14" width="0.1524" layer="91"/>
+<pinref part="GND16" gate="1" pin="GND"/>
+<wire x1="294.64" y1="104.14" x2="294.64" y2="101.6" width="0.1524" layer="91"/>
+<pinref part="SV1" gate="1" pin="6"/>
+<wire x1="299.72" y1="99.06" x2="314.96" y2="99.06" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$5" class="0">
@@ -9866,16 +9875,8 @@ either a battery or AC adapter to power the unit.l </text>
 <segment>
 <pinref part="X1" gate="G$1" pin="3"/>
 <wire x1="40.64" y1="233.68" x2="55.88" y2="233.68" width="0.1524" layer="91"/>
+<pinref part="JP3" gate="G$1" pin="1"/>
 <wire x1="55.88" y1="233.68" x2="55.88" y2="210.82" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$19" class="0">
-<segment>
-<wire x1="299.72" y1="99.06" x2="299.72" y2="104.14" width="0.1524" layer="91"/>
-<wire x1="299.72" y1="104.14" x2="294.64" y2="104.14" width="0.1524" layer="91"/>
-<wire x1="294.64" y1="104.14" x2="294.64" y2="99.06" width="0.1524" layer="91"/>
-<pinref part="SV1" gate="1" pin="6"/>
-<wire x1="299.72" y1="99.06" x2="314.96" y2="99.06" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
