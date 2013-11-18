@@ -53,7 +53,7 @@
 <layer number="56" name="wert" color="7" fill="1" visible="no" active="no"/>
 <layer number="91" name="Nets" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="92" name="Busses" color="1" fill="1" visible="yes" active="yes"/>
-<layer number="93" name="Pins" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="93" name="Pins" color="2" fill="1" visible="no" active="yes"/>
 <layer number="94" name="Symbols" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="95" name="Names" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="96" name="Values" color="7" fill="1" visible="yes" active="yes"/>
@@ -9870,12 +9870,6 @@ in, ground from battery is lifted.</text>
 <pinref part="SV2" gate="1" pin="4"/>
 </segment>
 </net>
-<net name="N$17" class="0">
-<segment>
-<pinref part="IC3" gate="G$1" pin="PD6(AIN0)"/>
-<wire x1="236.22" y1="111.76" x2="261.62" y2="111.76" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="+3V3" class="0">
 <segment>
 <pinref part="IC2" gate="A1" pin="VO"/>
@@ -9992,6 +9986,7 @@ in, ground from battery is lifted.</text>
 <wire x1="304.8" y1="91.44" x2="340.36" y2="91.44" width="0.1524" layer="91"/>
 <pinref part="JP5" gate="G$1" pin="1"/>
 <wire x1="243.84" y1="63.5" x2="243.84" y2="93.98" width="0.1524" layer="91"/>
+<junction x="243.84" y="93.98"/>
 </segment>
 </net>
 <net name="N$32" class="0">
@@ -10000,16 +9995,21 @@ in, ground from battery is lifted.</text>
 <wire x1="304.8" y1="104.14" x2="314.96" y2="104.14" width="0.1524" layer="91"/>
 <wire x1="304.8" y1="96.52" x2="304.8" y2="104.14" width="0.1524" layer="91"/>
 <pinref part="IC3" gate="G$1" pin="PB3(MOSI/OC2)"/>
-<wire x1="236.22" y1="96.52" x2="304.8" y2="96.52" width="0.1524" layer="91"/>
+<wire x1="236.22" y1="96.52" x2="238.76" y2="96.52" width="0.1524" layer="91"/>
 <pinref part="JP6" gate="G$1" pin="1"/>
-<wire x1="236.22" y1="96.52" x2="236.22" y2="63.5" width="0.1524" layer="91"/>
+<wire x1="238.76" y1="96.52" x2="304.8" y2="96.52" width="0.1524" layer="91"/>
+<wire x1="236.22" y1="86.36" x2="236.22" y2="63.5" width="0.1524" layer="91"/>
+<wire x1="236.22" y1="86.36" x2="238.76" y2="86.36" width="0.1524" layer="91"/>
+<wire x1="238.76" y1="86.36" x2="238.76" y2="96.52" width="0.1524" layer="91"/>
+<junction x="238.76" y="96.52"/>
 </segment>
 </net>
 </nets>
 </sheet>
 </sheets>
 <errors>
-<approved hash="106,1,236.22,111.76,N$17,,,,,"/>
+<approved hash="104,1,187.96,114.3,IC3,VCC,+5V,,,"/>
+<approved hash="104,1,187.96,139.7,IC3,AVCC,+5V,,,"/>
 </errors>
 </schematic>
 </drawing>
