@@ -2,8 +2,8 @@ EAGLE AutoRouter Statistics:
 
 Job           : C:/Users/Chris/Documents/GitHub/SignalSenders/Schematics/T09_Signal Senders_Build.brd
 
-Start at      : 16:17:56 (11/17/2013)
-End at        : 16:17:58 (11/17/2013)
+Start at      : 10:15:50 (11/18/2013)
+End at        : 10:15:52 (11/18/2013)
 Elapsed time  : 00:00:02
 
 Signals       :    47   RoutingGrid: 10 mil  Layers: 2
