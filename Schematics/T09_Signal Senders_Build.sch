@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.5.0">
+<eagle version="6.3">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -9922,10 +9922,10 @@ in, ground from battery is lifted.</text>
 <pinref part="JP1" gate="A" pin="4"/>
 <wire x1="248.92" y1="30.48" x2="226.06" y2="30.48" width="0.1524" layer="91"/>
 <wire x1="226.06" y1="30.48" x2="226.06" y2="76.2" width="0.1524" layer="91"/>
-<wire x1="226.06" y1="76.2" x2="259.08" y2="76.2" width="0.1524" layer="91"/>
-<wire x1="259.08" y1="76.2" x2="259.08" y2="104.14" width="0.1524" layer="91"/>
-<pinref part="IC3" gate="G$1" pin="PB0(ICP)"/>
-<wire x1="259.08" y1="104.14" x2="236.22" y2="104.14" width="0.1524" layer="91"/>
+<wire x1="226.06" y1="76.2" x2="271.78" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="271.78" y1="76.2" x2="271.78" y2="99.06" width="0.1524" layer="91"/>
+<pinref part="IC3" gate="G$1" pin="PB2(SS/OC1B)"/>
+<wire x1="271.78" y1="99.06" x2="236.22" y2="99.06" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$35" class="0">
@@ -9933,19 +9933,19 @@ in, ground from battery is lifted.</text>
 <pinref part="JP1" gate="A" pin="8"/>
 <wire x1="248.92" y1="35.56" x2="223.52" y2="35.56" width="0.1524" layer="91"/>
 <wire x1="223.52" y1="35.56" x2="223.52" y2="78.74" width="0.1524" layer="91"/>
-<wire x1="223.52" y1="78.74" x2="256.54" y2="78.74" width="0.1524" layer="91"/>
-<wire x1="256.54" y1="78.74" x2="256.54" y2="101.6" width="0.1524" layer="91"/>
-<pinref part="IC3" gate="G$1" pin="PB1(OC1A)"/>
-<wire x1="256.54" y1="101.6" x2="236.22" y2="101.6" width="0.1524" layer="91"/>
+<wire x1="223.52" y1="78.74" x2="269.24" y2="78.74" width="0.1524" layer="91"/>
+<wire x1="269.24" y1="78.74" x2="269.24" y2="104.14" width="0.1524" layer="91"/>
+<pinref part="IC3" gate="G$1" pin="PB0(ICP)"/>
+<wire x1="269.24" y1="104.14" x2="236.22" y2="104.14" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$36" class="0">
 <segment>
-<pinref part="IC3" gate="G$1" pin="PB2(SS/OC1B)"/>
-<wire x1="236.22" y1="99.06" x2="274.32" y2="99.06" width="0.1524" layer="91"/>
-<wire x1="274.32" y1="99.06" x2="274.32" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="274.32" y1="101.6" x2="274.32" y2="30.48" width="0.1524" layer="91"/>
 <pinref part="JP1" gate="A" pin="3"/>
 <wire x1="274.32" y1="30.48" x2="256.54" y2="30.48" width="0.1524" layer="91"/>
+<pinref part="IC3" gate="G$1" pin="PB1(OC1A)"/>
+<wire x1="236.22" y1="101.6" x2="274.32" y2="101.6" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$37" class="0">

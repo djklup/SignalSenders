@@ -9341,7 +9341,7 @@ W = angled&lt;p&gt;
 <part name="SV1" library="con-lstb" deviceset="MA03-2" device="" value=" SPI"/>
 <part name="P+7" library="supply1" deviceset="+5V" device=""/>
 <part name="GND16" library="supply1" deviceset="GND" device=""/>
-<part name="SV2" library="con-lstb" deviceset="MA04-1" device=""/>
+<part name="SV2" library="con-lstb" deviceset="MA04-1" device="" value=" "/>
 </parts>
 <sheets>
 <sheet>
@@ -9863,30 +9863,6 @@ in, ground from battery is lifted.</text>
 <wire x1="45.72" y1="233.68" x2="40.64" y2="233.68" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$31" class="0">
-<segment>
-<pinref part="IC3" gate="G$1" pin="PB3(MOSI/OC2)"/>
-<wire x1="236.22" y1="96.52" x2="304.8" y2="96.52" width="0.1524" layer="91"/>
-<wire x1="304.8" y1="96.52" x2="304.8" y2="104.14" width="0.1524" layer="91"/>
-<pinref part="SV1" gate="1" pin="4"/>
-<wire x1="304.8" y1="104.14" x2="314.96" y2="104.14" width="0.1524" layer="91"/>
-<pinref part="JP6" gate="G$1" pin="1"/>
-<wire x1="236.22" y1="96.52" x2="236.22" y2="93.98" width="0.1524" layer="91"/>
-<pinref part="IC3" gate="G$1" pin="PB4(MISO)"/>
-<wire x1="236.22" y1="93.98" x2="236.22" y2="63.5" width="0.1524" layer="91"/>
-<wire x1="236.22" y1="93.98" x2="243.84" y2="93.98" width="0.1524" layer="91"/>
-<wire x1="243.84" y1="93.98" x2="304.8" y2="93.98" width="0.1524" layer="91"/>
-<wire x1="304.8" y1="93.98" x2="304.8" y2="91.44" width="0.1524" layer="91"/>
-<wire x1="304.8" y1="91.44" x2="340.36" y2="91.44" width="0.1524" layer="91"/>
-<wire x1="340.36" y1="91.44" x2="340.36" y2="101.6" width="0.1524" layer="91"/>
-<pinref part="SV1" gate="1" pin="1"/>
-<wire x1="340.36" y1="101.6" x2="330.2" y2="101.6" width="0.1524" layer="91"/>
-<pinref part="JP5" gate="G$1" pin="1"/>
-<wire x1="243.84" y1="93.98" x2="243.84" y2="63.5" width="0.1524" layer="91"/>
-<junction x="236.22" y="93.98"/>
-<junction x="243.84" y="93.98"/>
-</segment>
-</net>
 <net name="N$33" class="0">
 <segment>
 <pinref part="IC3" gate="G$1" pin="PB5(SCK)"/>
@@ -9962,21 +9938,36 @@ in, ground from battery is lifted.</text>
 <wire x1="269.24" y1="33.02" x2="256.54" y2="33.02" width="0.1524" layer="91"/>
 </segment>
 </net>
+<net name="N$31" class="0">
+<segment>
+<pinref part="IC3" gate="G$1" pin="PB4(MISO)"/>
+<wire x1="236.22" y1="93.98" x2="243.84" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="243.84" y1="93.98" x2="304.8" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="304.8" y1="93.98" x2="304.8" y2="91.44" width="0.1524" layer="91"/>
+<pinref part="SV1" gate="1" pin="1"/>
+<wire x1="340.36" y1="91.44" x2="340.36" y2="101.6" width="0.1524" layer="91"/>
+<wire x1="340.36" y1="101.6" x2="330.2" y2="101.6" width="0.1524" layer="91"/>
+<wire x1="304.8" y1="91.44" x2="340.36" y2="91.44" width="0.1524" layer="91"/>
+<pinref part="JP5" gate="G$1" pin="1"/>
+<wire x1="243.84" y1="63.5" x2="243.84" y2="93.98" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$32" class="0">
+<segment>
+<pinref part="SV1" gate="1" pin="4"/>
+<wire x1="304.8" y1="104.14" x2="314.96" y2="104.14" width="0.1524" layer="91"/>
+<wire x1="304.8" y1="96.52" x2="304.8" y2="104.14" width="0.1524" layer="91"/>
+<pinref part="IC3" gate="G$1" pin="PB3(MOSI/OC2)"/>
+<wire x1="236.22" y1="96.52" x2="304.8" y2="96.52" width="0.1524" layer="91"/>
+<pinref part="JP6" gate="G$1" pin="1"/>
+<wire x1="236.22" y1="96.52" x2="236.22" y2="63.5" width="0.1524" layer="91"/>
+</segment>
+</net>
 </nets>
 </sheet>
 </sheets>
 <errors>
-<approved hash="104,1,187.96,114.3,IC2,VCC,+5V,,,"/>
-<approved hash="104,1,187.96,139.7,IC2,AVCC,+5V,,,"/>
-<approved hash="106,1,236.22,121.92,N$11,,,,,"/>
-<approved hash="106,1,236.22,119.38,N$12,,,,,"/>
-<approved hash="106,1,236.22,116.84,N$15,,,,,"/>
-<approved hash="106,1,236.22,114.3,N$16,,,,,"/>
 <approved hash="106,1,236.22,111.76,N$17,,,,,"/>
-<approved hash="110,1,236.22,93.98,RF_SPIDSCSC,RF_SPIDSCS,,,,"/>
-<approved hash="110,1,236.22,91.44,RF_SPIDSCSC,RF_SPI5,,,,"/>
-<approved hash="111,1,236.22,91.44,RF_SPIDSCSC,,,,,"/>
-<approved hash="111,1,236.22,93.98,RF_SPIDSCSC,,,,,"/>
 </errors>
 </schematic>
 </drawing>

@@ -122,7 +122,7 @@ Leslie Eide</text>
 <text x="2.54" y="25.4" size="1.778" layer="25">Chris Klupenger
 Max Cope
 Leslie Eide</text>
-<text x="2.54" y="12.7" size="1.778" layer="25">Rev. 1
+<text x="2.54" y="15.24" size="1.778" layer="25">Rev. 1
 Board 1</text>
 </plain>
 <libraries>
@@ -2161,6 +2161,7 @@ Please make sure your boards conform to these design rules.</description>
 <attribute name="NAME" x="26.67" y="23.241" size="1.27" layer="25" ratio="10"/>
 <attribute name="VALUE" x="33.401" y="27.305" size="1.27" layer="27" ratio="10" rot="R270"/>
 </element>
+<element name="D2" library="diode" package="DO41-10" value="1N4004" x="2.54" y="-5.08"/>
 </elements>
 <signals>
 <signal name="GND">
@@ -2432,9 +2433,7 @@ Please make sure your boards conform to these design rules.</description>
 <signal name="+9V">
 <contactref element="D1" pad="A"/>
 <contactref element="X1" pad="1"/>
-<contactref element="JP3" pad="1"/>
 <wire x1="11.43" y1="48.006" x2="11.43" y2="40.64" width="0.3048" layer="16"/>
-<wire x1="11.43" y1="40.64" x2="11.43" y2="38.1" width="0.3048" layer="16"/>
 <wire x1="11.176" y1="48.006" x2="11.43" y2="48.006" width="0.3048" layer="16"/>
 <wire x1="8.382" y1="50.8" x2="11.176" y2="48.006" width="0.3048" layer="16"/>
 <wire x1="8.382" y1="50.8" x2="8.57" y2="50.8" width="0.3048" layer="16"/>
@@ -2444,6 +2443,8 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="8.382" y1="50.8" x2="8.382" y2="53.34" width="0.3048" layer="1"/>
 <wire x1="8.382" y1="50.8" x2="8.57" y2="50.8" width="0.3048" layer="1"/>
 <via x="11.43" y="40.64" extent="1-16" drill="0.6"/>
+<contactref element="D2" pad="C"/>
+<wire x1="-2.54" y1="-5.08" x2="11.43" y2="40.64" width="0" layer="19" extent="16-16"/>
 </signal>
 <signal name="N$11">
 <contactref element="IC3" pad="4"/>
@@ -2477,9 +2478,6 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="37.592" y1="18.034" x2="38.608" y2="17.018" width="0.3048" layer="1"/>
 <wire x1="34.29" y1="18.034" x2="37.592" y2="18.034" width="0.3048" layer="1"/>
 <wire x1="34.29" y1="20.32" x2="34.29" y2="18.034" width="0.3048" layer="1"/>
-</signal>
-<signal name="N$17">
-<contactref element="IC3" pad="12"/>
 </signal>
 <signal name="+3V3">
 <contactref element="IC2" pad="3"/>
@@ -2611,6 +2609,11 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="69.088" y1="16.256" x2="69.088" y2="14.986" width="0.3048" layer="1"/>
 <wire x1="68.58" y1="16.764" x2="69.088" y2="16.256" width="0.3048" layer="1"/>
 <wire x1="68.58" y1="17.78" x2="68.58" y2="16.764" width="0.3048" layer="1"/>
+</signal>
+<signal name="N$13">
+<contactref element="D2" pad="A"/>
+<contactref element="JP3" pad="1"/>
+<wire x1="7.62" y1="-5.08" x2="11.43" y2="38.1" width="0" layer="19" extent="1-1"/>
 </signal>
 </signals>
 </board>
