@@ -9384,6 +9384,7 @@ W = angled&lt;p&gt;
 <part name="P+7" library="supply1" deviceset="+5V" device=""/>
 <part name="GND16" library="supply1" deviceset="GND" device=""/>
 <part name="SV2" library="con-lstb" deviceset="MA04-1" device="" value=" "/>
+<part name="D2" library="diode" deviceset="1N4004" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -9499,6 +9500,7 @@ in, ground from battery is lifted.</text>
 <instance part="P+7" gate="1" x="289.56" y="119.38"/>
 <instance part="GND16" gate="1" x="294.64" y="106.68"/>
 <instance part="SV2" gate="1" x="269.24" y="116.84" rot="R180"/>
+<instance part="D2" gate="1" x="48.26" y="223.52" rot="R90"/>
 </instances>
 <busses>
 <bus name="LED[0..3]">
@@ -9836,9 +9838,9 @@ in, ground from battery is lifted.</text>
 <label x="45.72" y="236.22" size="1.778" layer="95"/>
 <pinref part="X1" gate="G$1" pin="1"/>
 <wire x1="40.64" y1="236.22" x2="48.26" y2="236.22" width="0.1524" layer="91"/>
-<pinref part="JP3" gate="G$1" pin="1"/>
+<pinref part="D2" gate="1" pin="C"/>
 <wire x1="48.26" y1="236.22" x2="50.8" y2="236.22" width="0.1524" layer="91"/>
-<wire x1="48.26" y1="210.82" x2="48.26" y2="236.22" width="0.1524" layer="91"/>
+<wire x1="48.26" y1="226.06" x2="48.26" y2="236.22" width="0.1524" layer="91"/>
 <junction x="48.26" y="236.22"/>
 </segment>
 </net>
@@ -10004,13 +10006,16 @@ in, ground from battery is lifted.</text>
 <junction x="238.76" y="96.52"/>
 </segment>
 </net>
+<net name="N$13" class="0">
+<segment>
+<pinref part="D2" gate="1" pin="A"/>
+<pinref part="JP3" gate="G$1" pin="1"/>
+<wire x1="48.26" y1="220.98" x2="48.26" y2="210.82" width="0.1524" layer="91"/>
+</segment>
+</net>
 </nets>
 </sheet>
 </sheets>
-<errors>
-<approved hash="104,1,187.96,114.3,IC3,VCC,+5V,,,"/>
-<approved hash="104,1,187.96,139.7,IC3,AVCC,+5V,,,"/>
-</errors>
 </schematic>
 </drawing>
 <compatibility>

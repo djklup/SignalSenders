@@ -9436,9 +9436,10 @@ either a battery or AC adapter to power the unit.l </text>
 <wire x1="187.96" y1="170.18" x2="187.96" y2="167.64" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<wire x1="317.5" y1="93.98" x2="289.56" y2="93.98" width="0.1524" layer="91"/>
 <pinref part="P+7" gate="1" pin="+5V"/>
 <wire x1="289.56" y1="93.98" x2="289.56" y2="109.22" width="0.1524" layer="91"/>
+<pinref part="SV1" gate="1" pin="2"/>
+<wire x1="314.96" y1="93.98" x2="289.56" y2="93.98" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="GND" class="0">
@@ -9533,8 +9534,9 @@ either a battery or AC adapter to power the unit.l </text>
 <wire x1="45.72" y1="220.98" x2="45.72" y2="231.14" width="0.1524" layer="91"/>
 <wire x1="45.72" y1="231.14" x2="40.64" y2="231.14" width="0.1524" layer="91"/>
 <junction x="45.72" y="231.14"/>
-<wire x1="53.34" y1="210.82" x2="53.34" y2="231.14" width="0.1524" layer="91"/>
 <wire x1="53.34" y1="231.14" x2="45.72" y2="231.14" width="0.1524" layer="91"/>
+<pinref part="JP3" gate="G$1" pin="2"/>
+<wire x1="53.34" y1="210.82" x2="53.34" y2="231.14" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="JP1" gate="A" pin="1"/>
@@ -9550,6 +9552,14 @@ either a battery or AC adapter to power the unit.l </text>
 <pinref part="C7" gate="G$1" pin="2"/>
 <pinref part="GND15" gate="1" pin="GND"/>
 <wire x1="101.6" y1="68.58" x2="101.6" y2="66.04" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<wire x1="299.72" y1="99.06" x2="299.72" y2="104.14" width="0.1524" layer="91"/>
+<wire x1="299.72" y1="104.14" x2="294.64" y2="104.14" width="0.1524" layer="91"/>
+<pinref part="GND16" gate="1" pin="GND"/>
+<wire x1="294.64" y1="104.14" x2="294.64" y2="101.6" width="0.1524" layer="91"/>
+<pinref part="SV1" gate="1" pin="6"/>
+<wire x1="299.72" y1="99.06" x2="314.96" y2="99.06" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$5" class="0">
@@ -9590,6 +9600,7 @@ either a battery or AC adapter to power the unit.l </text>
 <wire x1="337.82" y1="152.4" x2="337.82" y2="99.06" width="0.1524" layer="91"/>
 <pinref part="SV1" gate="1" pin="5"/>
 <wire x1="337.82" y1="99.06" x2="330.2" y2="99.06" width="0.1524" layer="91"/>
+<junction x="187.96" y="149.86"/>
 </segment>
 </net>
 <net name="N$3" class="0">
@@ -9728,7 +9739,8 @@ either a battery or AC adapter to power the unit.l </text>
 <pinref part="IC2" gate="G$1" pin="PB3(MOSI/OC2)"/>
 <pinref part="JP6" gate="G$1" pin="1"/>
 <wire x1="236.22" y1="96.52" x2="236.22" y2="63.5" width="0.1524" layer="91"/>
-<wire x1="236.22" y1="96.52" x2="317.5" y2="96.52" width="0.1524" layer="91"/>
+<pinref part="SV1" gate="1" pin="4"/>
+<wire x1="236.22" y1="96.52" x2="314.96" y2="96.52" width="0.1524" layer="91"/>
 <junction x="236.22" y="96.52"/>
 </segment>
 <segment>
@@ -9749,8 +9761,9 @@ either a battery or AC adapter to power the unit.l </text>
 <junction x="243.84" y="93.98"/>
 <wire x1="279.4" y1="93.98" x2="279.4" y2="78.74" width="0.1524" layer="91"/>
 <wire x1="279.4" y1="78.74" x2="337.82" y2="78.74" width="0.1524" layer="91"/>
-<wire x1="337.82" y1="93.98" x2="327.66" y2="93.98" width="0.1524" layer="91"/>
 <wire x1="337.82" y1="93.98" x2="337.82" y2="78.74" width="0.1524" layer="91"/>
+<pinref part="SV1" gate="1" pin="1"/>
+<wire x1="337.82" y1="93.98" x2="330.2" y2="93.98" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="JP1" gate="A" pin="7"/>
@@ -9862,15 +9875,8 @@ either a battery or AC adapter to power the unit.l </text>
 <segment>
 <pinref part="X1" gate="G$1" pin="3"/>
 <wire x1="40.64" y1="233.68" x2="55.88" y2="233.68" width="0.1524" layer="91"/>
+<pinref part="JP3" gate="G$1" pin="1"/>
 <wire x1="55.88" y1="233.68" x2="55.88" y2="210.82" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$19" class="0">
-<segment>
-<wire x1="317.5" y1="99.06" x2="299.72" y2="99.06" width="0.1524" layer="91"/>
-<wire x1="299.72" y1="99.06" x2="299.72" y2="104.14" width="0.1524" layer="91"/>
-<wire x1="299.72" y1="104.14" x2="294.64" y2="104.14" width="0.1524" layer="91"/>
-<wire x1="294.64" y1="104.14" x2="294.64" y2="99.06" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
