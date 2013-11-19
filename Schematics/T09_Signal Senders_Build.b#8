@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.3">
+<eagle version="6.5.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -2456,9 +2456,6 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="32.004" y1="24.13" x2="32.004" y2="22.606" width="0.3048" layer="16"/>
 <wire x1="31.75" y1="24.13" x2="32.004" y2="24.13" width="0.3048" layer="16"/>
 <via x="34.29" y="20.32" extent="1-16" drill="0.6096"/>
-</signal>
-<signal name="N$17">
-<contactref element="IC3" pad="12"/>
 </signal>
 <signal name="+3V3">
 <contactref element="IC2" pad="3"/>
