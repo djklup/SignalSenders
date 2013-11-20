@@ -1,0 +1,33 @@
+Web ID	Access ID	Salesorder Number	Shipping Method	Payment Method	
+49623265	86152	37966571	UPS 3-Day Delivery (order by 8:00 PM CT)	VISA	
+
+Shipping Address
+First Name	Last Name	Company	Mail Stop	Address Line 1	Address Line 2	City	State	Postal Code	Country	Email Address	Telephone	
+Maxwell	Cope			1033 Se Franklin		Portland	OR	97202	USA	mcope@pdx.edu	4406239968	
+
+Billing Address
+First Name	Last Name	Company	Mail Stop	Address Line 1	Address Line 2	City	State	Postal Code	Country	Email Address	Telephone	
+Maxwell	Cope			15757 Sw Village Cir		Beaverton	OR	97007	USA		4406239968	
+
+Index	Quantity	Part Number	Description	Customer Reference	Available Quantity	Backorder Quantity	Unit Price USD	Extended Price USD	
+1	30	399-1113-1-ND	CAP CER 22PF 50V 5% NP0 0805		30	0	0.04800	$1.44	
+2	10	P15330CT-ND	CAP ALUM 100UF 16V 20% RADIAL		10	0	0.40900	$4.09	
+3	15	399-8015-1-ND	CAP CER 10UF 10V Y5V 0805		15	0	0.11100	$1.67	
+4	10	1276-1286-1-ND	CAP CER 0.1UF 25V Y5V 0805		10	0	0.03100	$0.31	
+5	10	1N4004DICT-ND	DIODE GEN PURPOSE 400V 1A DO41		10	0	0.12000	$1.20	
+6	10	497-1468-5-ND	IC REG LDO 5V 2A TO220AB		10	0	0.63700	$6.37	
+7	10	MCP1825S-3302E/AB-ND	IC REG LDO 3.3V 0.5A TO220-3		10	0	0.82000	$8.20	
+8	10	ATMEGA328P-PU-ND	IC MCU 8BIT 32KB FLASH 28DIP		10	0	3.16000	$31.60	
+9	10	S7107-ND	CONN HEADER FMAL 8PS .1" DL GOLD		10	0	0.69900	$6.99	
+10	50	P1.0KADCT-ND	RES 1K OHM 1/4W 5% 0805 SMD		50	0	0.08740	$4.37	
+11	10	450-1650-ND	SWITCH TACTILE SPST-NO 0.05A 12V		10	0	0.09200	$0.92	
+12	10	A105155-ND	CONN HEADER BRKWAY 6POS DL .100		10	0	0.44000	$4.40	
+13	10	CT2092MS-ND	SWITCH RAISED ACTUATOR 2 SEC 50V		10	0	0.54300	$5.43	
+14	10	CP-202A-ND	CONN POWER JACK 2.1MM PCB		10	0	0.64400	$6.44	
+15	10	CTX1085-ND	CRYSTAL 16MHZ 18PF THRU		10	0	0.30000	$3.00	
+16	10	A100210-ND	CONN IC SOCKET VERT 28POS TIN		10	0	0.41100	$4.11	
+17	25	A26853-ND	SHUNT LP W HANDLE 2 POS SN		25	0	0.25720	$6.43	
+						Subtotal	$96.97
+						Shipping	unknown
+						Estimated Sales Tax	$0.00
+						Total	unknown
