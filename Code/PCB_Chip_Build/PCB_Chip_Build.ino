@@ -19,6 +19,15 @@ int pinEAST        = 16;
 int pinSOUTH       = 15;
 int pinWEST        = 14;
 
+//Set up the timers
+unsigned long timer1 =0;
+unsigned long timer2 =0;
+unsigned long timer3 =0;
+unsigned long timer4 =0;
+unsigned long interval = 10000; //Time that the LED should stay on for in milliseconds
+unsigned long currentMillis;
+
+
 const int pin_trip =  7; // Pin dedicated to ir trip 
 int trip           =  0; // Variable for trip state
 uint8_t tripID     =  0; // Used to identify trip and which LED to light.
@@ -160,45 +169,33 @@ void loop(void)
 		{
 		radio.read( &tripID, sizeof(tripID));
 		printf("Unit %i has tripped.\n",tripID);
+                //Turn on that LED
+                digitalWrite(13+tripID, HIGH);
+                //Start the timer of the unit that got tripped
                 if (tripID == 1)
-                  {
-                  digitalWrite(13+tripID, HIGH);
-                  }
+                  { timer1 = millis(); }
                 else if (tripID == 2)
-                  {
-		  digitalWrite(13+tripID, HIGH);
-                  }
+                  { timer2 = millis(); }
                 else if (tripID == 3)
-                  {
-                  digitalWrite(13+tripID, HIGH);
-                  }
+                  { timer3 = millis(); }
                 else if (tripID == 4)
-                  {
-                  digitalWrite(13+tripID, HIGH);
-                  }
-                  
-                delay(1000);
+                  { timer4 = millis(); }
 		}
          else 
-                digitalWrite(13+tripID, LOW);
+               
+                //If it has been [interval] since the LED went on, then we will shut it off)
+                currentMillis = millis();
+                if (currentMillis >= (timer1 + interval))
+                  { digitalWrite(14, LOW);
+                    timer1 = 0; }
+                if (currentMillis >= (timer1 + interval))
+                  { digitalWrite(15, LOW);
+                    timer2 = 0; }
+                if (currentMillis >= (timer1 + interval))
+                  { digitalWrite(16, LOW);
+                    timer3 = 0; }
+                if (currentMillis >= (timer1 + interval))
+                  { digitalWrite(17, LOW);
+                    timer4 = 0; }
            
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
- 
- 
- 
-
