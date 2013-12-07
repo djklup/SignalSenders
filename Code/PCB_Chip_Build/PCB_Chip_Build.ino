@@ -24,7 +24,7 @@ unsigned long timer1 =0;
 unsigned long timer2 =0;
 unsigned long timer3 =0;
 unsigned long timer4 =0;
-unsigned long interval = 10000; //Time that the LED should stay on for in milliseconds
+unsigned long interval = 2000; //Time that the LED should stay on for in milliseconds
 unsigned long currentMillis;
 
 
@@ -142,7 +142,20 @@ void loop(void)
 	trip = digitalRead(pin_trip);
 	if (trip == 1)
 		{
+ 
 		radio.stopListening();
+
+                //Turn on your own LED if you got tripped, and start your timer
+                digitalWrite(13+unitID, HIGH);
+                if (unitID == 1)
+                  { timer1 = millis(); }
+                else if (unitID == 2)
+                  { timer2 = millis(); }
+                else if (unitID == 3)
+                  { timer3 = millis(); }
+                else if (unitID == 4)
+                  { timer4 = millis(); }
+
 		printf("TRIP");
 		printf("Now sending Trip....\n");
                 printf("Unit %i has tripped.\n",unitID);
@@ -158,6 +171,8 @@ void loop(void)
 		printf("Listening Resumed\n");
   //----Resume Listen
 		radio.startListening();
+                //delay so that there is sufficient enough time to listen
+                delay(10);
 		// Send to Led Blink
 		// tripID = unitID;
 		// keep tripID until sent
@@ -183,18 +198,18 @@ void loop(void)
 		}
          else 
                
-                //If it has been [interval] since the LED went on, then we will shut it off)
+                //If it has been [interval] since the LED went on, then we will shut it off
                 currentMillis = millis();
                 if (currentMillis >= (timer1 + interval))
                   { digitalWrite(14, LOW);
                     timer1 = 0; }
-                if (currentMillis >= (timer1 + interval))
+                if (currentMillis >= (timer2 + interval))
                   { digitalWrite(15, LOW);
                     timer2 = 0; }
-                if (currentMillis >= (timer1 + interval))
+                if (currentMillis >= (timer3 + interval))
                   { digitalWrite(16, LOW);
                     timer3 = 0; }
-                if (currentMillis >= (timer1 + interval))
+                if (currentMillis >= (timer4 + interval))
                   { digitalWrite(17, LOW);
                     timer4 = 0; }
            
