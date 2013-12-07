@@ -1,0 +1,42 @@
+//------Begin radio and define communication pipes-----	
+	radio.begin();
+	
+	const uint64_t talking_pipes[2] = { 0xF0F0F0F0D2LL, 0xF0F0F0F0C3LL, 0xF0F0F0F0B4LL, 0xF0F0F0F0A5LL };
+	
+	if ( unitID == 1 )
+		{
+		radio.openReadingPipe(1,talking_pipes[1]);
+                radio.openReadingPipe(2,talking_pipes[2]);
+                radio.openReadingPipe(3,talking_pipes[3]);
+                
+		radio.openWritingPipe(talking_pipes[0]);
+		}
+  
+	if ( unitID == 2 )
+		{
+		radio.openReadingPipe(1,talking_pipes[0]);
+                radio.openReadingPipe(2,talking_pipes[2]);
+                radio.openReadingPipe(3,talking_pipes[3]);
+                
+		radio.openWritingPipe(talking_pipes[1]);
+		}
+
+	if ( unitID == 3 )
+		{
+		radio.openReadingPipe(1,talking_pipes[0]);
+                radio.openReadingPipe(2,talking_pipes[1]);
+                radio.openReadingPipe(3,talking_pipes[3]);
+                
+		radio.openWritingPipe(talking_pipes[2]);
+		}
+  
+	if ( unitID == 4 )
+		{
+		radio.openReadingPipe(1,talking_pipes[0]);
+                radio.openReadingPipe(2,talking_pipes[1]);
+                radio.openReadingPipe(3,talking_pipes[2]);
+                
+		radio.openWritingPipe(talking_pipes[3]);
+		}
+
+//------Print setup details---------------------------
