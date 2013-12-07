@@ -11,11 +11,15 @@ int pin1_val       =  0; // Value on ID Pin
 int pin2_val       =  0; 
 uint8_t unitID     =  0; // 0 - Default. 1 - North. 2 - South. 3 - East. 4 - West.    
 
-const int pin1     =  6; // User defined ID pins
-const int pin2     =  7; // ID Pin
-int pinLED         = 17; // LED North
+const int pin1     =  18; // User defined ID pins
+const int pin2     =  19; // ID Pin
 
-const int pin_trip =  5; // Pin dedicated to ir trip 
+int pinNORTH       = 17;
+int pinEAST        = 16;
+int pinSOUTH       = 15;
+int pinWEST        = 14;
+
+const int pin_trip =  7; // Pin dedicated to ir trip 
 int trip           =  0; // Variable for trip state
 uint8_t tripID     =  0; // Used to identify trip and which LED to light.
 
@@ -29,7 +33,10 @@ void setup(void)
    printf_begin();
 //------I/O Setup--------------------------------------
  //-----Set up LED Pins--------------------------------
-        pinMode(pinLED, OUTPUT);
+        pinMode(pinNORTH, OUTPUT);
+        pinMode(pinEAST, OUTPUT);
+        pinMode(pinSOUTH, OUTPUT);
+        pinMode(pinWEST, OUTPUT);
         
         
  //-----Set up Two pins for ID Process-----------------
@@ -49,34 +56,65 @@ void setup(void)
   
  //-----Logic to ID unit from user configuration-------
 
-	if (pin1_val == 0)
-		{ unitID = 1; }
+	if (pin1_val == 0 && pin2_val == 0)
+		{ unitID = 1;}
 	
-	//else if (pin1_val == 0 && pin2_val == 1)
-		//{ unitID = 4; }
+	else if (pin1_val == 0 && pin2_val == 1)
+		{ unitID = 4; }
 	
-	//else if (pin1_val == 1 && pin2_val == 0)
-		//{ unitID = 3; }	
+	else if (pin1_val == 1 && pin2_val == 0)
+		{ unitID = 3; }	
 
-	if (pin1_val == 1)
+	else if (pin1_val == 1 && pin2_val == 1)
 		{ unitID = 2; }	
+      
+        //Blink the LED of the unit that this device is
+        for(int blinknums = 0; blinknums <=6; blinknums++) {
+            digitalWrite(13+unitID, HIGH);
+            delay(150);
+            digitalWrite(13+unitID, LOW);
+            delay(150);
+        }
 	
 //------Begin radio and define communication pipes-----	
 	radio.begin();
 	
-	const uint64_t talking_pipes[2] = { 0xF0F0F0F0D2LL, 0xF0F0F0F0C3LL };
-	//const uint64_t listening_pipes[2] = { 0x3A3A3A3AD2LL, 0x3A3A3A3AC3LL };
-
+	const uint64_t talking_pipes[4] = { 0xF0F0F0F0D2LL, 0xF0F0F0F0C3LL, 0xF0F0F0F0B4LL, 0xF0F0F0F0A5LL };
+	
 	if ( unitID == 1 )
 		{
 		radio.openReadingPipe(1,talking_pipes[1]);
+                radio.openReadingPipe(2,talking_pipes[2]);
+                radio.openReadingPipe(3,talking_pipes[3]);
+                
 		radio.openWritingPipe(talking_pipes[0]);
 		}
   
 	if ( unitID == 2 )
 		{
 		radio.openReadingPipe(1,talking_pipes[0]);
+                radio.openReadingPipe(2,talking_pipes[2]);
+                radio.openReadingPipe(3,talking_pipes[3]);
+                
 		radio.openWritingPipe(talking_pipes[1]);
+		}
+
+	if ( unitID == 3 )
+		{
+		radio.openReadingPipe(1,talking_pipes[0]);
+                radio.openReadingPipe(2,talking_pipes[1]);
+                radio.openReadingPipe(3,talking_pipes[3]);
+                
+		radio.openWritingPipe(talking_pipes[2]);
+		}
+  
+	if ( unitID == 4 )
+		{
+		radio.openReadingPipe(1,talking_pipes[0]);
+                radio.openReadingPipe(2,talking_pipes[1]);
+                radio.openReadingPipe(3,talking_pipes[2]);
+                
+		radio.openWritingPipe(talking_pipes[3]);
 		}
 
 //------Print setup details---------------------------
@@ -122,10 +160,27 @@ void loop(void)
 		{
 		radio.read( &tripID, sizeof(tripID));
 		printf("Unit %i has tripped.\n",tripID);
-		digitalWrite(pinLED, HIGH);
+                if (tripID == 1)
+                  {
+                  digitalWrite(13+tripID, HIGH);
+                  }
+                else if (tripID == 2)
+                  {
+		  digitalWrite(13+tripID, HIGH);
+                  }
+                else if (tripID == 3)
+                  {
+                  digitalWrite(13+tripID, HIGH);
+                  }
+                else if (tripID == 4)
+                  {
+                  digitalWrite(13+tripID, HIGH);
+                  }
+                  
+                delay(1000);
 		}
          else 
-                digitalWrite(pinLED, LOW);
+                digitalWrite(13+tripID, LOW);
            
 }
 
@@ -142,9 +197,8 @@ void loop(void)
 
 
 
+ 
+ 
+ 
+ 
 
-
- 
- 
- 
- 
