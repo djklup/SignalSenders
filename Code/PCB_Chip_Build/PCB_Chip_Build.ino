@@ -24,7 +24,7 @@ unsigned long timer1 =0;
 unsigned long timer2 =0;
 unsigned long timer3 =0;
 unsigned long timer4 =0;
-unsigned long interval = 2000; //Time that the LED should stay on for in milliseconds
+unsigned long interval = 5000; //Time that the LED should stay on for in milliseconds
 unsigned long currentMillis;
 
 
@@ -76,6 +76,20 @@ void setup(void)
 
 	else if (pin1_val == 1 && pin2_val == 1)
 		{ unitID = 2; }	
+      //Blink all of the LEDs
+       for(int blinknums = 0; blinknums <=4; blinknums++) {
+            digitalWrite(14, HIGH);
+            digitalWrite(15, HIGH);
+            digitalWrite(16, HIGH);
+            digitalWrite(17, HIGH);
+            delay(300);
+            digitalWrite(14, LOW);
+            digitalWrite(15, LOW);
+            digitalWrite(16, LOW);
+            digitalWrite(17, LOW);
+            delay(300);
+        }
+      
       
         //Blink the LED of the unit that this device is
         for(int blinknums = 0; blinknums <=6; blinknums++) {
